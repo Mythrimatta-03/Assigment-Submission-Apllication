@@ -1,5 +1,7 @@
 package com.example.Repository;
 
-public class UserRepository {
+import com.example.model.User;
 
+public interface UserRepository extends MongoRepository<User, String> {
+    User findByUsername(String username);
 }
